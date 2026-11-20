@@ -148,6 +148,7 @@ margin:70px auto;
 padding:10px;
 display:flex;
 width: 95%;
+ text-decoration: none;
 flex-direction:column;
 flex-wrap:wrap;
 text-align:center;
@@ -182,7 +183,7 @@ box-shadow: 4px 5px 5px white;
 }
 .btn img ,footer p img
  {background-color: white;}
-.btn img:hover ,  .tell img:hover{
+.btn img:hover {
     background-color: rgb(40, 85, 116);
     border-radius: 20%;
 }
