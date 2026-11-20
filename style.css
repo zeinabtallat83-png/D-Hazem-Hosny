@@ -62,7 +62,7 @@ text-align: center;
 text-decoration: none;
 cursor: pointer;
 color: black;
-height: 70px;
+max-height: 70px;
 width: 100px;
 } 
 .cv {
