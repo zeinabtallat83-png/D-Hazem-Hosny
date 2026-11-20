@@ -57,20 +57,29 @@ box-shadow: 5px 4px 4px rgb(36, 169, 221);
 
 <script>
 function book(){
-  let service= document.getElementById('service').value;
-  let date= document.getElementById('date').value;
-  let time= document.getElementById('time').value;
-  let note= document.getElementById('note').value;
-let msg =`حجز من الموقع 
-الخدمة: ${service.value}
-اليوم: ${date.value}
-الساعة: ${time.value}
-ملاحظة: ${note.value}
-الاسم: ${user.name}
-الموبايل: ${user.phone}`;
-let whatsappLink = `https://wa.me/201551137782?text=${encodeURIComponent(msg)}`;
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const note = document.getElementById('note').value;
+
+  if(!name || !phone || !date){
+    alert('من فضلك املا الاسم والموبايل واليوم');
+    return;
+  }
+
+  const msg = `حجز جديد من الموقع:
+الاسم: ${name}
+الموبايل: ${phone}
+الخدمة: ${service}
+اليوم: ${date}
+الساعة: ${time}
+ملاحظة: ${note}`;
+
+  const whatsappLink = `https://wa.me/201551137782?text=${encodeURIComponent(msg)}`;
   window.open(whatsappLink, '_blank');
-  alert('تم الحجز! هنتواصل معاكي على الواتساب للتأكيد');
+  alert('تم الحجز! هنتواصل معاك على الواتساب');
 }
 </script>
 </body>
