@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectUs</title>
+    <style>
+body{ 
+    background-color:rgb(189, 189, 209);
+     background-image: url(pro2.jpg);
+      background-repeat: no-repeat;
+        background-position:center;
+       background-size: cover;
+       opacity:1;
+     position: relative;
+  background-attachment: fixed;
+ text-align: center;
+ margin:10px  auto;  }
+
+.card
+{padding:20px;
+    border-radius:15px;
+    box-shadow:5px 4px 15px rgb(17, 118, 143); font-size: 20px;
+align-items: center; display: flex; flex-direction: column;
+background-color: rgba(233, 224, 224, 0.5);}
+select,input,textarea
+{width:80%;padding:10px;margin:5px auto;
+    border:3px solid rgb(20, 139, 160);
+    border-radius:20px
+}
+button{width:100%;padding:14px; background-color:rgba(65, 216, 5, 0.925);color:#fff;
+border:none;border-radius:12px;font-size:18px}
+h2 img{
+    background-color:white;
+    border-radius: 20px;
+    width:70px; height:70px;
+box-shadow: 5px 4px 4px rgb(36, 169, 221);
+}
+</style>
+</head>
+<body>
+<h2>مرحباً، احجز معادك <img src="3yada.png" ></h2>
+<div class="card">
+  <label>نوع الخدمة</label>
+  <select id="service">
+     <option>كشف عادي</option>
+    <option>زراعة أسنان</option>
+    <option>خلع جراحي</option>
+    <option>تجميل</option>
+    <option> جراحه اللثة  </option>
+  </select>
+  <label>اليوم</label><input type="date" id="date">
+  <label>الوقت</label><input type="time" id="time">
+  <label>ملاحظات</label><textarea id="note" placeholder="بشتكي من ايه؟"></textarea>
+ <a href=" https://wa.me/201090564323 "> <button onclick="book()">تأكيد الحجز واتساب </button>  </a> 
+</div>  
+
+<script>
+function book(){
+  let service= document.getElementById('service').value;
+  let date= document.getElementById('date').value;
+  let time= document.getElementById('time').value;
+  let note= document.getElementById('note').value;
+let msg =`حجز من الموقع 
+الخدمة: ${service.value}
+اليوم: ${date.value}
+الساعة: ${time.value}
+ملاحظة: ${note.value}
+الاسم: ${user.name}
+الموبايل: ${user.phone}`
+let whatsappLink = `https://wa.me/201551137782?text=${encodeURIComponent(msg)}`;
+  window.open(whatsappLink, '_blank');
+  alert('تم الحجز! هنتواصل معاكي على الواتساب للتأكيد');
+}
+</script>
+</body>
+</html> 
