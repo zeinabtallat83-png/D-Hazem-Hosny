@@ -64,11 +64,6 @@ function book(){
   const time = document.getElementById('time').value;
   const note = document.getElementById('note').value;
 
-  if(!name || !phone || !date){
-    alert('من فضلك املا الاسم والموبايل واليوم');
-    return;
-  }
-
   const msg = `حجز جديد من الموقع:
 الاسم: ${name}
 الموبايل: ${phone}
@@ -78,7 +73,7 @@ function book(){
 ملاحظة: ${note}`;
 
   const whatsappLink = `https://wa.me/201551137782?text=${encodeURIComponent(msg)}`;
-  window.open(whatsappLink, '_blank');
+  window.open(whatsappLink, `_blank`);
   alert('تم الحجز! هنتواصل معاك على الواتساب');
 }
 </script>
